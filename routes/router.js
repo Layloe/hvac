@@ -2,10 +2,12 @@ const express = require('express')
 const router = express.Router()
 const Appointment = require('../model/appointmentModels')
 const path = require('path')
-require('dotenv').config()
-
 const {MailtrapTransport} = require('mailtrap')
 const Nodemailer = require('nodemailer')
+
+require('dotenv').config()
+
+
 
 const TOKEN = process.env.MAIL_TOKEN
 
@@ -20,7 +22,7 @@ const sender = {
   };
 
 router.post('/schedule_service', async (rec, res) => {
-    const {name, email, phone, date} = req.body
+    const {name, email, phone, date} = req.body;
 
     let scheduleEmailText = `We've received your request to schedule an appointment on ${date}. 
 We'll give you a call at ${phone} to find a time that works for you.
@@ -28,21 +30,21 @@ Sincerely,
 Lozano Brothers HVAC Team`
 
     try {
-        const newAppointment = new Appointment({name, email, phone, date})
-        await newAppointment.save()
+    const newAppointment = new Appointment({name, email, phone, date})
+    await newAppointment.save()
 
-        transport.sendMail({
-    from: sender,
-    to: email,
-    subject: "HVAC Appointment Request",
-    text: scheduleEmailText,
-    category: "Integration Test",
+    await transport.sendMail({
+        from: sender,
+        to: email,
+        subject: "HVAC Appointment Request",
+        text: scheduleEmailText,
+        category: "Integration Test",
   })
 
-        res.sendFile(path.join(__dirname, '../views/bookResults.html'))
+    res.sendFile(path.join(__dirname, '../views/bookResults.html'))
     } catch (err) {
-        console.log(err)
-        res.sendFile(path.join(__dirname, '../views/bookError.html'))
+    console.log(err)
+    res.sendFile(path.join(__dirname, '../views/bookError.html'))
     }
 })
 
