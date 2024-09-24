@@ -21,7 +21,7 @@ const sender = {
     name: "Lozano Brothers HVAC site",
   };
 
-router.post('/schedule_service', async (rec, res) => {
+router.post('/schedule_service', async (req, res) => {
     const {name, email, phone, date} = req.body;
 
     let scheduleEmailText = `We've received your request to schedule an appointment on ${date}. 
@@ -41,7 +41,7 @@ Lozano Brothers HVAC Team`
         category: "Integration Test",
   })
 
-    res.sendFile(path.join(__dirname, '../views/bookResults.html'))
+    res.sendFile(path.join(__dirname, '../views/bookResult.html'))
     } catch (err) {
     console.log(err)
     res.sendFile(path.join(__dirname, '../views/bookError.html'))
