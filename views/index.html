@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg-white"> 
+        <!-- d-flex justify-content-evenly -->
+        <!-- navbar shadow-sm navbar-expand-lg navbar-light bg-light -->
+        <!-- see if I can add font; highlight clicked item in bold. Also margin and padding for style -->
         <!-- d-flex justify-content-center align-items-center -->
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Lozano Brothers HVAC</a>
+        <div class="container-fluid ps-5">
+            <a class="navbar-brand" href="#">Lozano Brothers HVAC
+                <img src="/views/images/hvac_favicon.jpeg" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item me-4">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link" href="#services">Services</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link" href="#forms">Schedule & Quote</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item me-4">
                         <a class="nav-link" href="#contact">Contact Us</a>
                     </li>
                 </ul>
@@ -34,7 +39,7 @@
         </div>
     </nav>
     
-    <section class="bg-primary text-white text-center p-5 ">
+    <section class="bg-primary text-white text-center p-5 mt-5">
         <div class="container">
             <h1>Welcome to Lozano Brothers HVAC Company</h1>
             <p>Your trusted solution for heating, ventilation and air conditioning.</p>
@@ -50,7 +55,7 @@
                         <img class="card-image-top" src="/images/AC_repair.webp" alt="/images/hvac_logoSS.png"> 
                         <div class="card-body">
                             <h5 class="card-title">Air Conditioning Repair</h5>
-                            <p class="card-text">Fast and reliable AC repair to keep you cool.</p>
+                            <p class="card-text">Fast and reliable AC repair to keep you cool and dry in any weather.</p>
                         </div>
                     </div>
                 </div>
