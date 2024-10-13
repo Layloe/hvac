@@ -1,0 +1,6 @@
+.bg-img {
+    background-image: url('images/riverside_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
