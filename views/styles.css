@@ -1,6 +1,10 @@
-.bg-img {
+/* .bg-img {
     background-image: url('images/riverside_bg.jpeg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-}
+} */
+ .overlay-content img {
+    width: 250;
+    height: auto;
+ }
